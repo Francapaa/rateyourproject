@@ -1,0 +1,10 @@
+{
+    "rewrites": [
+      {
+        "source": "/api/(.*)",
+        "destination": "https://cliente-app-production.up.railway.app/api/$1"
+      }
+    ]
+  }
+  
+  
