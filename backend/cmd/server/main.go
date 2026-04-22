@@ -20,9 +20,13 @@ func main() {
 
 	gin.SetMode(gin.ReleaseMode)
 
-	db, err := gorm.Open(postgres.Open(cfg.DatabaseURL), &gorm.Config{})
+	db, err := gorm.Open(postgres.New(postgres.Config{
+		DSN:                  cfg.DatabaseURL,
+		PreferSimpleProtocol: true,
+	}), &gorm.Config{})
+
 	if err != nil {
-		log.Fatalf("failed to connect to database: %v", err)
+		log.Fatal("FAILED TO CONNECT WITH DATABASE:", err)
 	}
 
 	//if err := db.AutoMigrate(&models.User{}, &models.Conversation{}); err != nil {
