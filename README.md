@@ -8,7 +8,7 @@ Plataforma de análisis de proyectos técnicos mediante inteligencia artificial.
 - **Gráfico Hexagonal**: Visualización de hireabilidad en 6 dimensiones clave
 - **Múltiples Roles**: Evaluación personalizada para Frontend, Backend y DevOps
 - **Niveles de Seniority**: Análisis adaptado a Junior, Mid-Level, Senior y Lead
-- **Versión Premium**: Recomendaciones avanzadas mediante RAG y Prompt Engineering
+- **Versión Premium**: Recomendaciones avanzadas, o pivote de ideas dependiendo del producto
 
 ## Tech Stack
 
@@ -23,16 +23,14 @@ Plataforma de análisis de proyectos técnicos mediante inteligencia artificial.
 - **API**: REST
 - **Database**: PostgreSQL (Supabase)
 
-### AI
-- **Model**: gpt-5.4-nano (OPEN AI)
-- **Integración**: Prompt Engineering + RAG (Premium)
+
 
 ## Requisitos Previos
 
 - Node.js 18+
 - Go 1.21+
 - PostgreSQL (Supabase)
-- API Key de Open AI
+  
 
 ## Instalación
 
