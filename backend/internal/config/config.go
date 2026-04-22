@@ -27,7 +27,7 @@ func Load() *Config {
 		SupabaseURL:        getEnv("SUPABASE_URL", ""),
 		SupabaseServiceKey: getEnv("SUPABASE_SERVICE_ROLE_KEY", ""),
 		JWTSecret:          getEnv("JWT_SECRET", ""),
-		FrontendURL:        getEnv("FRONTEND_URL", "http://localhost:3000"),
+		FrontendURL:        getEnv("FRONTEND_URL", "rateyourproject.vercel.app"),
 		OpenAIAPIKey:       getEnv("OPEN_AI_API_KEY", ""),
 		GeminiAPIKey:       getEnv("GEMINI_API_KEY", getEnv("GOOGLE_API_KEY", getEnv("OPEN_AI_API_KEY", ""))),
 		GeminiModel:        getEnv("GEMINI_MODEL", "gemini-2.5-flash"),
