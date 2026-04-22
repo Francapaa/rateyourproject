@@ -1,6 +1,8 @@
 package auth
 
 import (
+	"fmt"
+
 	"github.com/franc/rateyourproject/internal/config"
 	"github.com/franc/rateyourproject/internal/services"
 	"github.com/franc/rateyourproject/internal/utils"
@@ -41,7 +43,7 @@ func (h *AuthHandler) HandleGoogleCallback(c *gin.Context) {
 		utils.InternalError(c, "failed to process authentication")
 		return
 	}
-
+	fmt.Println("ENTRO ACA")
 	utils.Success(c, result)
 }
 
