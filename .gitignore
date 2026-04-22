@@ -1,0 +1,7 @@
+node_modules
+agents
+.opencode
+.env
+.env.local
+backend/.env
+package-lock.json
