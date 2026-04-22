@@ -5,3 +5,4 @@ agents
 .env.local
 backend/.env
 package-lock.json
+.agents
