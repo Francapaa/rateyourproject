@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"log"
 
 	"github.com/franc/rateyourproject/internal/config"
@@ -28,7 +29,7 @@ func main() {
 	if err != nil {
 		log.Fatal("FAILED TO CONNECT WITH DATABASE:", err)
 	}
-
+	fmt.Println("TODO CORRECTO")
 	//if err := db.AutoMigrate(&models.User{}, &models.Conversation{}); err != nil {
 	//	log.Fatalf("failed to migrate database: %v", err)
 	//}
