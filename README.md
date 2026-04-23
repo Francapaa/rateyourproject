@@ -4,7 +4,7 @@ Plataforma de análisis de proyectos técnicos mediante inteligencia artificial.
 
 ## Funcionalidades
 
-- **Análisis de Proyectos**: Sube archivos `.md` de tu proyecto y recibe un análisis completo
+- **Análisis de Proyectos**: Sube carpetas `.zip` de tu proyecto y recibe un análisis completo
 - **Gráfico Hexagonal**: Visualización de hireabilidad en 6 dimensiones clave
 - **Múltiples Roles**: Evaluación personalizada para Frontend, Backend y DevOps
 - **Niveles de Seniority**: Análisis adaptado a Junior, Mid-Level, Senior y Lead
