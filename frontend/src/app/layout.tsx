@@ -20,6 +20,7 @@ const instrument = Instrument_Sans({
 export const metadata: Metadata = {
   title: 'RateYourProject — Evaluá la hireabilidad de tu proyecto',
   description: 'Subí tu proyecto, elegí tu rol y seniority, y recibí una evaluación hexagonal de hireabilidad basada en 6 dimensiones clave.',
+  icons: { icon: '/favicon.ico' },
 }
 
 export default function RootLayout({
