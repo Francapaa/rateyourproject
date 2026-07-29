@@ -1,36 +1,18 @@
-'use client'
+import type { Metadata } from 'next'
+import { ChatClient } from './_ChatClient'
 
-import { ChatContent } from '@/components/chat/ChatContent'
-import { useAnalysisSSE } from '@/hooks/useAnalysisSSE'
-import { useEffect, useState } from 'react'
-import { isValidUUID } from '@/lib/utils'
-import Link from 'next'
-
-interface ChatPageProps {
+type Props = {
   params: Promise<{ id: string }>
 }
 
-export default function ChatPage({ params }: ChatPageProps) {
-  const [conversationId, setConversationId] = useState<string>('')
-  const { loadLatestAnalysis, status, result } = useAnalysisSSE()
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { id } = await params
+  return {
+    title: 'Análisis de proyecto',
+    description: `Resultados del análisis de hireabilidad para tu proyecto.`,
+  }
+}
 
-  useEffect(() => {
-    const loadData = async () => {
-      const resolvedParams = await params
-      const id = resolvedParams.id
-      if (isValidUUID(id)) {
-        setConversationId(id)
-        await loadLatestAnalysis(id)
-      }
-    }
-    loadData()
-  }, [params, loadLatestAnalysis])
-
-  return (
-    <ChatContent 
-      conversationId={conversationId} 
-      initialStatus={status}
-      initialResult={result}
-    />
-  )
+export default function ChatPage({ params }: Props) {
+  return <ChatClient params={params} />
 }

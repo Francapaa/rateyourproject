@@ -1,7 +1,13 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
 import { createClient } from '@/lib/supabase/server'
 import { redirect } from 'next/navigation'
 import { ProfileForm } from '@/components/profile/ProfileForm'
+
+export const metadata: Metadata = {
+  title: 'Perfil',
+  description: 'Configurá tu rol y seniority para obtener análisis detallados de hireabilidad.',
+}
 
 export default async function ProfilePage() {
   const supabase = await createClient()

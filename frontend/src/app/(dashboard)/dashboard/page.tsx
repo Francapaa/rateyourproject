@@ -1,4 +1,10 @@
+import type { Metadata } from 'next'
 import { DashboardContent } from '@/components/dashboard/DashboardContent'
+
+export const metadata: Metadata = {
+  title: 'Dashboard',
+  description: 'Gestioná tus análisis de hireabilidad y revisá el historial de proyectos evaluados.',
+}
 
 export default async function DashboardPage() {
   return (
