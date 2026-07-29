@@ -3,11 +3,13 @@ package main
 import (
 	"fmt"
 	"log"
+	"time"
 
 	"github.com/franc/rateyourproject/internal/config"
 	"github.com/franc/rateyourproject/internal/handlers/analysis"
 	"github.com/franc/rateyourproject/internal/handlers/auth"
 	"github.com/franc/rateyourproject/internal/handlers/conversation"
+	"github.com/franc/rateyourproject/internal/middleware"
 	"github.com/franc/rateyourproject/internal/repository"
 	services "github.com/franc/rateyourproject/internal/services"
 	extractor "github.com/franc/rateyourproject/internal/services/analysis"
@@ -34,6 +36,10 @@ func main() {
 	//	log.Fatalf("failed to migrate database: %v", err)
 	//}
 
+	analysisLimiter := middleware.NewRateLimiter(3, time.Hour)
+	authLimiter := middleware.NewRateLimiter(10, time.Minute)
+	apiLimiter := middleware.NewRateLimiter(30, time.Minute)
+
 	userRepo := repository.NewUserRepository(db)
 	authService := services.NewAuthService(cfg, userRepo)
 	authHandler := auth.NewAuthHandler(authService, cfg)
@@ -50,7 +56,7 @@ func main() {
 
 	r := gin.Default()
 	r.Use(corsMiddleware(cfg))
-	setupRoutes(r, cfg, authHandler, conversationHandler, analysisHandler)
+	setupRoutes(r, cfg, authHandler, conversationHandler, analysisHandler, analysisLimiter, authLimiter, apiLimiter)
 
 	log.Printf("server starting on :%s", cfg.Port)
 	if err := r.Run(":" + cfg.Port); err != nil {
