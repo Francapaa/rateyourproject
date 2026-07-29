@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import {Analytics} from '@vercel/analytics/next'; 
+import { Analytics } from '@vercel/analytics/next'
 import { Bricolage_Grotesque, Instrument_Sans } from 'next/font/google'
 import { AuthProvider } from '@/contexts/AuthContext'
 import './globals.css'
@@ -59,6 +59,7 @@ export default function RootLayout({
     <html lang="es" className={`${bricolage.variable} ${instrument.variable}`}>
       <body>
         <AuthProvider>{children}</AuthProvider>
+        <Analytics />
       </body>
     </html>
   )
