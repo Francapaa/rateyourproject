@@ -4,15 +4,18 @@ import { HowItWorks } from '@/components/landing/HowItWorks'
 import { Dimensions } from '@/components/landing/Dimensions'
 import { Roles } from '@/components/landing/Roles'
 import { SeniorityLevels } from '@/components/landing/SeniorityLevels'
+import { FAQSection } from '@/components/landing/FAQSection'
 import { CTA } from '@/components/landing/CTA'
 import { Navbar } from '@/components/landing/Navbar'
 
 export const metadata: Metadata = {
-  title: 'Evaluá la hireabilidad de tu proyecto',
-  description: 'Descubrí cómo tu proyecto se compara con lo que buscan las empresas. Evaluación gratuita en 6 dimensiones: Arquitectura, Calidad de Código, Testing, Documentación, Deploy y Buenas Prácticas.',
+  title: {
+    absolute: 'Evaluate the hireability of your project | RateYourProject',
+  },
+  description: 'Discover how your project compares to what companies really look for. Free evaluation across 6 dimensions: Architecture, Code Quality, Testing, Documentation, Deploy and Best Practices.',
   openGraph: {
-    title: 'RateYourProject — Evaluá la hireabilidad de tu proyecto',
-    description: 'Descubrí cómo tu proyecto se compara con lo que buscan las empresas. Evaluación gratuita en 6 dimensiones.',
+    title: 'RateYourProject — Evaluate the hireability of your project',
+    description: 'Discover how your project compares to what companies really look for. Free evaluation across 6 dimensions.',
   },
 }
 
@@ -25,6 +28,7 @@ export default function Home() {
       <Dimensions />
       <Roles />
       <SeniorityLevels />
+      <FAQSection />
       <CTA />
     </main>
   )

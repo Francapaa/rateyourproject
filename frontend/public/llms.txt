@@ -1,0 +1,16 @@
+# RateYourProject
+
+> RateYourProject is an AI-powered tool that evaluates the hireability of your software project. Upload your code, choose your role and experience level, and receive a hexagonal evaluation across 6 key dimensions (Architecture, Code Quality, Testing, Documentation, Deploy, Best Practices) with concrete recommendations to improve.
+
+## Services
+
+- [RateYourProject — hireability evaluation](https://rateyourproject.com): Upload your project as a .ZIP file and get an AI-powered hireability evaluation across 6 key dimensions.
+- [Sign in](https://rateyourproject.com/login): Sign in with Google to analyze your projects for free.
+
+## FAQ
+
+- [What is RateYourProject?](https://rateyourproject.com#faq): An AI-powered tool that evaluates the hireability of your software project across 6 key dimensions.
+- [Which roles can I get evaluated in?](https://rateyourproject.com#faq): Frontend, Backend, Fullstack and Infrastructure, each with its own evaluation criteria.
+- [What seniority levels are supported?](https://rateyourproject.com#faq): Junior (0-2 years), Mid-Level (2-5 years), Senior (5-8 years) and Staff (8+ years).
+- [Is RateYourProject free to use?](https://rateyourproject.com#faq): Yes, RateYourProject is completely free.
+- [What project files can I upload?](https://rateyourproject.com#faq): Your project as a .ZIP file up to 100MB, including README and architecture decisions.

@@ -3,7 +3,8 @@ import { DashboardContent } from '@/components/dashboard/DashboardContent'
 
 export const metadata: Metadata = {
   title: 'Dashboard',
-  description: 'Gestioná tus análisis de hireabilidad y revisá el historial de proyectos evaluados.',
+  description: 'Manage your hireability analyses and review your evaluated project history.',
+  robots: { index: false, follow: false },
 }
 
 export default async function DashboardPage() {

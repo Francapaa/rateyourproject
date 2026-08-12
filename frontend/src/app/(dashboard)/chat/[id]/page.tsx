@@ -8,8 +8,9 @@ type Props = {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { id } = await params
   return {
-    title: 'Análisis de proyecto',
-    description: `Resultados del análisis de hireabilidad para tu proyecto.`,
+    title: 'Project analysis',
+    description: 'Hireability analysis results for your project.',
+    robots: { index: false, follow: false },
   }
 }
 
