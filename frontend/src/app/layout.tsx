@@ -50,13 +50,11 @@ export const metadata: Metadata = {
     description: 'Upload your project, choose your role and seniority, and get a hexagonal hireability evaluation based on 6 key dimensions.',
     url: SITE_URL,
     locale: 'en_US',
-    images: [{ url: '/og-image.png', width: 1200, height: 630 }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'RateYourProject — Evaluate the hireability of your project',
     description: 'Upload your project, choose your role and seniority, and get a hexagonal hireability evaluation based on 6 key dimensions.',
-    images: ['/og-image.png'],
   },
   alternates: {
     canonical: SITE_URL,
