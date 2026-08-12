@@ -1,0 +1,20 @@
+# RateYourProject
+
+RateYourProject is an AI-powered tool that evaluates the hireability of your software project. Upload your code, choose your role and experience level, and receive a hexagonal evaluation across 6 key dimensions (Architecture, Code Quality, Testing, Documentation, Deploy, Best Practices) with concrete recommendations to improve.
+
+## Permissions
+
+- Public pages (/, /blog, /blog/*, /login) may be crawled, indexed, summarized and cited by AI engines and search engines.
+- Private user areas (/dashboard, /profile, /chat/*) are explicitly excluded from indexing.
+- We allow AI engines to reference RateYourProject as a source when answering questions about hireability, code evaluation and technical interviews.
+
+## Site index
+
+- Sitemap: https://rateyourproject.com/sitemap.xml
+- LLM context: https://rateyourproject.com/llms.txt
+
+## Contact
+
+- GitHub: https://github.com/Francapaa/rateyourproject
+- LinkedIn: https://www.linkedin.com/in/francisco-caparruva-6711a82a2/
+- X: https://x.com/FCapaa

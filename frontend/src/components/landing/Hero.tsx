@@ -36,9 +36,10 @@ export function Hero() {
             className="mt-6 md:mt-8 text-base md:text-lg text-muted max-w-xl mx-auto lg:mx-0 leading-relaxed"
             style={{ animationDelay: '0.3s' }}
           >
-            Upload your project .ZIP, choose your role and experience level, and receive a
-            hexagonal evaluation that shows exactly where you stand and
-            what to improve.
+            RateYourProject evaluates how hireable your software project is — how
+            ready your code is for a developer role. Upload your project as a .ZIP,
+            choose your role and seniority, and get a free score across 6 dimensions:
+            architecture, code quality, testing, documentation, deploy and best practices.
           </p>
 
           <div

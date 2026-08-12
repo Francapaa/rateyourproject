@@ -1,9 +1,13 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Bricolage_Grotesque, Instrument_Sans } from 'next/font/google'
+import { Analytics } from '@vercel/analytics/react'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 import { AuthProvider } from '@/contexts/AuthContext'
 import { JsonLd } from '@/components/seo/JsonLd'
 import { SITE_URL } from '@/lib/site'
 import './globals.css'
+
+const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL
 
 const bricolage = Bricolage_Grotesque({
   subsets: ['latin'],
@@ -59,6 +63,10 @@ export const metadata: Metadata = {
   },
 }
 
+export const viewport: Viewport = {
+  themeColor: '#0a0a0b',
+}
+
 const organizationSchema = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
@@ -66,6 +74,11 @@ const organizationSchema = {
   url: SITE_URL,
   description: 'AI-powered hireability evaluation for software projects.',
   logo: `${SITE_URL}/favicon.svg`,
+  sameAs: [
+    'https://github.com/Francapaa/rateyourproject',
+    'https://www.linkedin.com/in/francisco-caparruva-6711a82a2/',
+    'https://x.com/FCapaa',
+  ],
 }
 
 const webApplicationSchema = {
@@ -93,11 +106,19 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${bricolage.variable} ${instrument.variable}`}>
       <body>
+        {SUPABASE_URL && (
+          <>
+            <link rel="preconnect" href={SUPABASE_URL} crossOrigin="anonymous" />
+            <link rel="dns-prefetch" href={SUPABASE_URL} />
+          </>
+        )}
         <AuthProvider>
           <JsonLd data={organizationSchema} />
           <JsonLd data={webApplicationSchema} />
           {children}
         </AuthProvider>
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   )
