@@ -1,4 +1,18 @@
 import { STEPS } from '@/const/steps'
+import { JsonLd } from '@/components/seo/JsonLd'
+
+const howToSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'HowTo',
+  name: 'How to evaluate the hireability of your project',
+  description:
+    'Three simple steps to get a complete hireability evaluation of your software project.',
+  step: STEPS.map((step) => ({
+    '@type': 'HowToStep',
+    name: step.title,
+    text: step.description,
+  })),
+}
 
 const stepIcons = [
   <svg key="upload" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-8 h-8">
@@ -20,6 +34,7 @@ const stepIcons = [
 export function HowItWorks() {
   return (
     <section id="how-it-works" className="relative py-24 md:py-32 bg-surface-950">
+      <JsonLd data={howToSchema} />
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-16 md:mb-20">
           <span className="text-xs text-accent font-body tracking-[0.2em] uppercase">

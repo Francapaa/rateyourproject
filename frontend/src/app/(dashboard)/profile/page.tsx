@@ -5,8 +5,9 @@ import { redirect } from 'next/navigation'
 import { ProfileForm } from '@/components/profile/ProfileForm'
 
 export const metadata: Metadata = {
-  title: 'Perfil',
-  description: 'Configurá tu rol y seniority para obtener análisis detallados de hireabilidad.',
+  title: 'Profile',
+  description: 'Set up your role and seniority to get detailed hireability analyses.',
+  robots: { index: false, follow: false },
 }
 
 export default async function ProfilePage() {

@@ -2,11 +2,11 @@ import type { Metadata } from 'next'
 import { LoginClient } from './_LoginClient'
 
 export const metadata: Metadata = {
-  title: 'Iniciar sesión',
-  description: 'Accedé a RateYourProject con tu cuenta de Google para analizar la hireabilidad de tus proyectos.',
+  title: 'Sign in',
+  description: 'Sign in to RateYourProject with your Google account to analyze the hireability of your projects.',
   openGraph: {
-    title: 'Iniciar sesión — RateYourProject',
-    description: 'Accedé con tu cuenta de Google para analizar tus proyectos.',
+    title: 'Sign in — RateYourProject',
+    description: 'Sign in with your Google account to analyze your projects.',
   },
 }
 

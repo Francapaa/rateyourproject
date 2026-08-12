@@ -28,6 +28,9 @@ export function Navbar() {
           <a href="#roles" className="text-sm text-muted-light hover:text-accent transition-colors">
             Roles
           </a>
+          <Link href="/blog" className="text-sm text-muted-light hover:text-accent transition-colors">
+            Blog
+          </Link>
         </nav>
 
         <div className="flex items-center gap-4">
