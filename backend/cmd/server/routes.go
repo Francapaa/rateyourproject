@@ -9,13 +9,14 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-func setupRoutes(r *gin.Engine, cfg *config.Config, authHandler *auth.AuthHandler, conversationHandler *conversation.ConversationHandler, analysisHandler *analysis.AnalysisHandler) {
+func setupRoutes(r *gin.Engine, cfg *config.Config, authHandler *auth.AuthHandler, conversationHandler *conversation.ConversationHandler, analysisHandler *analysis.AnalysisHandler, analysisLimiter *middleware.RateLimiter, authLimiter *middleware.RateLimiter, apiLimiter *middleware.RateLimiter) {
 	r.Use(corsMiddleware(cfg))
 
-	r.POST("/api/auth/callback", authHandler.HandleGoogleCallback)
+	r.POST("/api/auth/callback", middleware.RateLimitByIP(authLimiter), authHandler.HandleGoogleCallback)
 
 	protected := r.Group("/api/auth")
 	protected.Use(middleware.AuthMiddleware())
+	protected.Use(middleware.RateLimitByUser(apiLimiter))
 	{
 		protected.GET("/me", authHandler.HandleMe)
 		protected.POST("/logout", authHandler.HandleLogout)
@@ -24,6 +25,7 @@ func setupRoutes(r *gin.Engine, cfg *config.Config, authHandler *auth.AuthHandle
 
 	conversations := r.Group("/api/conversations")
 	conversations.Use(middleware.AuthMiddleware())
+	conversations.Use(middleware.RateLimitByUser(apiLimiter))
 	{
 		conversations.GET("", conversationHandler.HandleGetRecentConversations)
 		conversations.POST("", conversationHandler.HandleCreateConversation)
@@ -31,6 +33,7 @@ func setupRoutes(r *gin.Engine, cfg *config.Config, authHandler *auth.AuthHandle
 
 	analysis := r.Group("/api/analysis")
 	analysis.Use(middleware.AuthMiddleware())
+	analysis.Use(middleware.RateLimitByUser(analysisLimiter))
 	{
 		analysis.POST("/upload", analysisHandler.HandleCreateAnalysis)
 		analysis.GET("/:conversationId", analysisHandler.HandleGetLatestAnalysis)
