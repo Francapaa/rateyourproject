@@ -1,0 +1,89 @@
+# RateYourProject — Full context
+
+RateYourProject is an AI-powered tool that evaluates the hireability of your software project. It is free to use. You upload your project as a .ZIP file (up to 100MB), choose your role and experience level, and receive a hexagonal score chart across 6 key dimensions with concrete recommendations to improve.
+
+## What is hireability?
+
+Hireability is how ready your skills, experience and — most importantly — your code are for the job market. It is not about how many years you have worked. It is about how clearly your projects prove you can solve the problems a company needs. A developer with two strong public projects is often more hireable than one with eight years of experience and no visible code. Recruiters and hiring managers cannot watch you work, so your code becomes your real resume.
+
+## How the evaluation works
+
+1. You choose your role: Frontend, Backend, Fullstack or Infrastructure.
+2. You choose your seniority: Junior (0-2 years), Mid-Level (2-5 years), Senior (5-8 years) or Staff (8+ years).
+3. You upload your project as a .ZIP file, including the README and architecture decisions.
+4. The AI analyzes your project across 6 dimensions and returns a hexagonal score chart plus actionable recommendations.
+
+## The 6 evaluation dimensions
+
+| Dimension | What it evaluates | How to score well |
+| --------- | ----------------- | ----------------- |
+| Architecture | Structure, separation of concerns, patterns, scalability | Organize by domain or feature, not by file type |
+| Code Quality | Readability, naming, complexity, consistency | Small functions, descriptive names, consistent style |
+| Testing | Coverage, test types, case quality | Test behavior that matters, not implementation detail |
+| Documentation | README, API docs, decisions, guides | Explain what, how, and why in plain language |
+| Deploy | CI/CD, configuration, monitoring, strategy | Automate the pipeline and document the release flow |
+| Best Practices | Security, performance, accessibility, errors | Apply the basics deliberately and consistently |
+
+## Roles
+
+- **Frontend**: mastery of frameworks, components, state management, visual performance, and user experience. Skills: React, Vue, Angular, CSS, Accessibility, Performance.
+- **Backend**: API architecture, databases, security, patterns, and server-side scalability. Skills: Go, Node.js, Python, SQL, APIs, Architecture.
+- **Fullstack**: ability to build complete solutions, from UI to server infrastructure. Skills: React, Node.js, APIs, Databases, Deploy, Architecture.
+- **Infrastructure**: infrastructure, CI/CD, containers, monitoring, and deployment practices. Skills: Docker, K8s, CI/CD, Cloud, IaC, Monitoring.
+
+## FAQ
+
+### What is RateYourProject?
+
+RateYourProject is an AI-powered tool that evaluates the hireability of your software project. Upload your code, choose your role and seniority, and receive a detailed evaluation across 6 key dimensions: Architecture, Code Quality, Testing, Documentation, Deploy and Best Practices.
+
+### How does the hireability evaluation work?
+
+You choose your role (Frontend, Backend, Fullstack or Infrastructure), upload your project as a .ZIP file, and our AI analyzes it across 6 dimensions. You receive a hexagonal score chart with concrete recommendations to improve your project.
+
+### What are the 6 evaluation dimensions?
+
+The evaluation analyzes Architecture (project structure and design patterns), Code Quality (readability and consistency), Testing (coverage and test cases), Documentation (README and technical decisions), Deploy (CI/CD and production setup) and Best Practices (security, performance and accessibility).
+
+### Which roles can I get evaluated in?
+
+RateYourProject evaluates 4 roles: Frontend, Backend, Fullstack and Infrastructure. Each role has its own criteria, adapted to what companies actually look for in that discipline.
+
+### What seniority levels are supported?
+
+4 seniority levels are supported: Junior (0-2 years), Mid-Level (2-5 years), Senior (5-8 years) and Staff (8+ years). Each level evaluates different expectations and maturity in your technical skills.
+
+### Is RateYourProject free to use?
+
+Yes. RateYourProject is free. Sign in with Google, upload your project and get your complete hireability evaluation at no cost.
+
+### What project files can I upload?
+
+You can upload your project as a .ZIP file up to 100MB. Include the complete codebase, plus architecture and technical decisions in a README, so everything counts in the evaluation.
+
+## Blog
+
+### What is hireability and how do you improve it?
+
+Hireability measures how ready your skills and your code are for the job market. It is determined by the 6 dimensions above. To improve yours: write the README first, solve a real problem end to end, add at least one test per meaningful behavior, configure CI/CD, and document your decisions. Improving all six dimensions is what turns a "shows effort" project into a "clearly hireable" one. Read more: https://rateyourproject.com/blog/what-is-hireability
+
+### How to evaluate your project before a technical interview
+
+A complete evaluation has three steps: define the profile (role and seniority), gather the code that represents you, and audit it across the six dimensions. Common mistakes that lower your score: no README, one giant folder, commits mixing features and fixes, secrets committed to the repository, and a .gitignore that includes node_modules. Read more: https://rateyourproject.com/blog/how-to-evaluate-your-project
+
+### Code review: what companies really look for in your GitHub
+
+The first thing anyone reviews is the repository landing page: README, folder structure and commit history. In roughly 30 seconds a reviewer decides whether your project feels serious. Signals that separate you: documented decisions, a growing test suite, automated checks, and accessibility/performance work. Red flags: no tests, a single commit for the whole app, hardcoded credentials, and ignoring stack conventions. Read more: https://rateyourproject.com/blog/what-companies-look-for-in-your-code
+
+### The 6 dimensions of a hireable project, explained
+
+Architecture is the first thing a reviewer notices because it appears before any code is read. Code quality is readability under a microscope. Tests are proof that you understand your own system. Documentation demonstrates empathy for whoever inherits your code. A project that runs only on your machine is half a project: a deploy story tells a reviewer you understand production. Improve the weakest dimensions first, because the final score is the shape of the whole, not the highest single number. Read more: https://rateyourproject.com/blog/six-dimensions-hireable-project
+
+## Links
+
+- Home: https://rateyourproject.com
+- Blog index: https://rateyourproject.com/blog
+- Sign in: https://rateyourproject.com/login
+- GitHub: https://github.com/Francapaa/rateyourproject
+- LinkedIn: https://www.linkedin.com/in/francisco-caparruva-6711a82a2/
+- X: https://x.com/FCapaa
