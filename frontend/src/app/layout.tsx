@@ -2,9 +2,8 @@ import type { Metadata } from 'next'
 import { Bricolage_Grotesque, Instrument_Sans } from 'next/font/google'
 import { AuthProvider } from '@/contexts/AuthContext'
 import { JsonLd } from '@/components/seo/JsonLd'
+import { SITE_URL } from '@/lib/site'
 import './globals.css'
-
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://rateyourproject.com'
 
 const bricolage = Bricolage_Grotesque({
   subsets: ['latin'],

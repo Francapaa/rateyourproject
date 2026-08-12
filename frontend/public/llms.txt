@@ -14,3 +14,10 @@
 - [What seniority levels are supported?](https://rateyourproject.com#faq): Junior (0-2 years), Mid-Level (2-5 years), Senior (5-8 years) and Staff (8+ years).
 - [Is RateYourProject free to use?](https://rateyourproject.com#faq): Yes, RateYourProject is completely free.
 - [What project files can I upload?](https://rateyourproject.com#faq): Your project as a .ZIP file up to 100MB, including README and architecture decisions.
+
+## Blog
+
+- [What is hireability and how do you improve it?](https://rateyourproject.com/blog/what-is-hireability): Hireability measures how ready your skills and code are for the job market. Explains the 6 dimensions and how to improve yours.
+- [How to evaluate your project before a technical interview](https://rateyourproject.com/blog/how-to-evaluate-your-project): Step-by-step audit of architecture, code quality, testing, documentation, deploy and best practices.
+- [Code review: what companies really look for in your GitHub](https://rateyourproject.com/blog/what-companies-look-for-in-your-code): The signals hiring teams scan for in your public repositories.
+- [The 6 dimensions of a hireable project, explained](https://rateyourproject.com/blog/six-dimensions-hireable-project): What each dimension evaluates and how to score well in all six.
